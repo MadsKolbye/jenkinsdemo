@@ -1,0 +1,8 @@
+Real rest API:
+HTTP METHOD         ENDPOINT
+GET                 /dinosaurs      Get ALL dinosaurs
+GET                 /dinosaurs/{id} Get the dinosaur by id
+POST                /dinosaurs      Create a dinosaur
+PUT                 /dinosaurs/{id} Updates the dinosaur by id
+PATCH               /dinosaurs/{id} Updates some values on dinosaur by id
+DELETE              /dinosaurs/{id} Deletes a dinosaur by id

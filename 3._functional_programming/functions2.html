@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions 2</title>
+</head>
+<body>
+
+  <script>
+
+    const myFavoriteThings = ["Java", "Hej", false];
+    function printer (something){
+        console.log(something);
+    }
+
+    //"High order function" -> "HoF" -> A function that takes a function as an argument
+    //myFavoriteThings.forEach(printer)
+
+    //Lambda
+    //myFavoriteThings.forEach(element => printer(element));
+
+    //myFavoriteThings.forEach((element, index, list) => printer(element))
+
+    myFavoriteThings.forEach(console.log)
+
+    /*
+    Anatomy of a lambda:
+    (some arguement)    [i name them]
+    =>                  [denotes lambda syntax]
+    [...]               [Function/Lambda body]
+     */
+    myFavoriteThings.forEach(element => {})
+  </script>
+
+</body>
+</html>

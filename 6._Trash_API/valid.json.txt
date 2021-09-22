@@ -1,0 +1,9 @@
+{
+    "Student1" : {
+        "firstname" : "Mads",
+        "lastname" : "Kolbye",
+        "age" : 10
+    }
+    "Hammer" : "Søm",
+    "Far" : "Søn"
+}

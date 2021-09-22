@@ -1,0 +1,9 @@
+{
+  "key": "value",
+  "arrayOfClasses": [
+    {"name": "fighter", "hitdie": "d12", "classFeatures": "weapons, armor and hitting things", "hasMagic": "sometimes", "isOverpowered": true},
+    {"name": "wizard", "hitdie": "d6", "classFeatures": "magic, knowledge, spells, not bieng OP", "hasMagic": true, "isOverpowered": false},
+    {"name": "rogue", "hitdie" : "d8", "classFeatures": "sneaking, stealing, baackstabbing, scouting, knowing how to sell stolen things", "hasMagic": "sometimes", "isOverpowered": false },
+    {"name": "bard", "hitdie": "d8", "classFeatures": "singing, lore, boosting people", "hasMagic": , "isOverpowered": }
+  ]
+}

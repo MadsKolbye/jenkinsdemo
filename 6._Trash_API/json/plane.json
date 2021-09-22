@@ -1,0 +1,26 @@
+{
+  "key": "value",
+  "manufacturer": "Airbus",
+  "isBetterthanBoolean": true,
+  "productLineSelecton": 60,
+  "pilots": [
+    {"name": "Bob"},
+    {"name": "Mads"},
+    {"name": "Anders", "Level" :  3}
+  ],
+  "Student1": {
+    "firstName": "Mads",
+    "lastName": "Kolbye",
+    "Age": 27
+  },
+  "Student2": {
+    "firstName": "Mads",
+    "lastName": "Møller",
+    "Age": 32
+  },
+  "Student3": {
+    "firstName": "Martin",
+    "lastName": "Steen",
+    "Age": 32
+  }
+}
