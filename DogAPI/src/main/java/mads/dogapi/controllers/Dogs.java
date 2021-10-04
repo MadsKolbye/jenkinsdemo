@@ -22,8 +22,7 @@ public class Dogs {
     //To get the specific information on a specific ID
     @GetMapping("/dogs/{dog_id}")
     public Dog getDogOnId(@PathVariable Long dog_id){
-        System.out.println(dog_id);
-        return dogRepository.getById(dog_id);
+        return dogRepository.findById(dog_id).get();
     }
 
     //To create a new dog into the list
