@@ -26,13 +26,21 @@ public class Dogs {
     }
 
     //To create a new dog into the list
-    @PostMapping("/artists")
+    @PostMapping("/dogs")
     public Dog createDog(@RequestBody Dog createDog){
         return dogRepository.save(createDog);
     }
 
-    @PutMapping("/artists/{dog_id}")
-    public Dog updateDog(){
-        return null;
+    //To update on a specific dog on ID
+    @PutMapping("/dogs/{dog_id}")
+    public Dog updateDog(@PathVariable Long dog_id, @RequestBody Dog dogUpdate){
+        dogUpdate.setDog_id(dog_id);
+        return dogRepository.save(dogUpdate);
+    }
+
+    //To delete a specific dog on ID
+    @DeleteMapping("/dogs/{dog_id}")
+    public void deleteDog(@PathVariable Long dog_id){
+        dogRepository.deleteById(dog_id);
     }
 }

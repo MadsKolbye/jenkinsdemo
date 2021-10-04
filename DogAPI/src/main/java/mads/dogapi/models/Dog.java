@@ -1,7 +1,10 @@
 package mads.dogapi.models;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Table(name="dogs")
 @Entity
 public class Dog {
