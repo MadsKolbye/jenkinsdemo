@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Table(name="dogs")
 @Entity
 public class Dog {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
@@ -24,4 +25,5 @@ public class Dog {
 
     @Column
     private boolean gender;
+
 }
