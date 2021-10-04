@@ -6,10 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class StudentMain {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("test.xml");
-        Student student = (Student) context.getBean("student");
+        Student student = context.getBean("student", Student.class);
+        Student studentx = context.getBean("student2", Student.class);
 
-        System.out.println("Student info:");
-        System.out.println("Name: "+student.getName());
-        System.out.println("Classname: "+student.getClassName());
+        student.studentPrint();
+        studentx.studentPrint();
     }
 }

@@ -8,4 +8,8 @@
         <property name="name" value="Karen"/>
         <property name="className" value="Dat25c"/>
     </bean>
+    <bean id="student2" class="mads.kea.sdinjections.Student">
+        <property name="name" value="Mads"/>
+        <property name="className" value="dat19c"/>
+    </bean>
 </beans>
