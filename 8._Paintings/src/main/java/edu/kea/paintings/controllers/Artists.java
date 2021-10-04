@@ -32,11 +32,11 @@ public class Artists {
 
     @PutMapping("/artists/{artistid}")
     public String updateArtistOnId(@PathVariable Long artistid, @RequestBody Artist artistToUpdate){
-        /*
+
         artistToUpdate.setId(artistid);
         artists.save(artistToUpdate);
-        */
 
+/*
         return artists.findById(artistid).map(foundArtist -> {
             System.out.println("foundArtist");
             foundArtist.setName(artistToUpdate.getName());
@@ -48,6 +48,8 @@ public class Artists {
             artists.save(foundArtist);
             return "Artist updated";
         }).orElse("Artist not updated");
+
+ */
     }
 
     @PatchMapping("/artists/{artistid}")
