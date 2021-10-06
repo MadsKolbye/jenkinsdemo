@@ -13,6 +13,12 @@ public class Dogs {
     @Autowired
     DogRepository dogRepository;
 
+    //Welcome message for the endpoint /
+    @GetMapping("/")
+    public String welcomeMessage(){
+        return "Welcome to my page dog API page :: Please use one of the following endpoints :: /dogs :: /dogs/x :::";
+    }
+
     //To get the list of all the dogs
     @GetMapping("/dogs")
     public Iterable<Dog> getDogs(){

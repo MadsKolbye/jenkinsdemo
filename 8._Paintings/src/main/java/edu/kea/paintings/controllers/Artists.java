@@ -33,10 +33,17 @@ public class Artists {
     @PutMapping("/artists/{artistid}")
     public String updateArtistOnId(@PathVariable Long artistid, @RequestBody Artist artistToUpdate){
 
+        if(artists.existsById(artistid)) {
+            artists.save(artistToUpdate);
+            return "Artist was created";
+        } else {
+            return "Artist not found";
+        }
+        /*
         artistToUpdate.setId(artistid);
         artists.save(artistToUpdate);
 
-/*
+
         return artists.findById(artistid).map(foundArtist -> {
             System.out.println("foundArtist");
             foundArtist.setName(artistToUpdate.getName());
@@ -48,13 +55,22 @@ public class Artists {
             artists.save(foundArtist);
             return "Artist updated";
         }).orElse("Artist not updated");
-
- */
+*/
     }
 
     @PatchMapping("/artists/{artistid}")
-    public Artist patchArtistOnId(@PathVariable Long artistid, @RequestBody String body){
-        return null;
+    public String patchArtistOnId(@PathVariable Long artistid, @RequestBody Artist artistToUpdate){
+        return artists.findById(artistid).map(foundArtist -> {
+            System.out.println("foundArtist");
+            if(artistToUpdate.getName() != null) foundArtist.setName(artistToUpdate.getName());
+            if(artistToUpdate.getAge() != 0) foundArtist.setAge(artistToUpdate.getAge());
+            if(artistToUpdate.getNationality() != null) foundArtist.setNationality(artistToUpdate.getNationality());
+            if(artistToUpdate.getPrimaryStyle() != null) foundArtist.setPrimaryStyle(artistToUpdate.getPrimaryStyle());
+            if(artistToUpdate.getBirthDate() != null) foundArtist.setBirthDate(artistToUpdate.getBirthDate());
+            if(artistToUpdate.getGender() != null) foundArtist.setGender(artistToUpdate.getGender());
+            artists.save(foundArtist);
+            return "Artist updated";
+        }).orElse("Artist not updated");
     }
 
     @DeleteMapping("/artists/{artistid}")
